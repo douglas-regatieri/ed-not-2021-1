@@ -84,7 +84,7 @@ estadosNe.push(estado8)
       calcule a densidade demográfica retornando o resultado da divisão da
       segunda pela primeira. 
 */
-let desDemo = (area, pop) => pop/area
+const desDemo = (area, pop) => pop/area
 
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
@@ -109,11 +109,20 @@ for (let i = 0; i < estadosNe.length; i++){
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
-
+const exibirProp = (obj) => {
+    for(let x in obj){
+        console.log(x)
+    }
+}
+console.log(exibirProp(estado1))
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
-
+*/
+for(let y of estadosNe){
+    exibirProp(estadosNe[y])
+}
 /*
+
    6)
       a) Declare um vetor vazio.
       b) Insira no vetor criado no item a) apenas o nome de cada Estado, conforme
