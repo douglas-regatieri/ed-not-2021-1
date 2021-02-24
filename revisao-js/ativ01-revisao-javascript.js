@@ -66,19 +66,26 @@ let estado6 = {
 }
 estadosNe.push(estado6)
 let estado7 = {
+    nome: 'Piauí',
+    sigla: 'PI',
+    area: 251577.74,
+    populacao: 3264531
+}
+estadosNe.push(estado7)
+let estado8 = {
     nome: 'Maranhão',
     sigla: 'MA',
     area: 331937.45,
     populacao: 7035055
 }
-estadosNe.push(estado7)
-let estado8 = {
+estadosNe.push(estado8)
+let estado9 = {
     nome: 'Bahia',
     sigla: 'BA',
     area: 564733.18,
     populacao: 14812617
 }
-estadosNe.push(estado8)
+estadosNe.push(estado9)
 /*
    2) Escreva uma arrow function que receba dois parâmetros, área e população, e
       calcule a densidade demográfica retornando o resultado da divisão da
@@ -96,8 +103,8 @@ const desDemo = (area, pop) => pop/area
 
 */
 for (let i = 0; i < estadosNe.length; i++){
-    let densidadeDemo = desDemo(estadosNe[i].area, estadosNe[i].populacao)
-    estadosNe[i]['densidade demográfica'] = densidadeDemo
+    
+    estadosNe[i]['densidade demográfica'] = desDemo(estadosNe[i].area, estadosNe[i].populacao)
 
     delete estadosNe[i].sigla
 
@@ -114,12 +121,11 @@ const exibirProp = (obj) => {
         console.log(x)
     }
 }
-console.log(exibirProp(estado1))
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
 */
 for(let y of estadosNe){
-    exibirProp(estadosNe[y])
+    exibirProp(y)
 }
 /*
 
@@ -134,3 +140,17 @@ for(let y of estadosNe){
          já existentes, e assim por diante.
 
 */
+
+let nomesEstados = []
+nomesEstados.push(estadosNe[0].nome)
+nomesEstados.unshift(estadosNe[1].nome)
+nomesEstados.splice(1,0,estadosNe[2].nome)
+nomesEstados.splice(1,0,estadosNe[3].nome)
+nomesEstados.splice(2,0,estadosNe[4].nome)
+nomesEstados.splice(1,0,estadosNe[5].nome)
+nomesEstados.splice(2,0,estadosNe[6].nome)
+nomesEstados.splice(2,0,estadosNe[7].nome)
+nomesEstados.splice(1,0,estadosNe[8].nome)
+
+
+console.log(nomesEstados)
