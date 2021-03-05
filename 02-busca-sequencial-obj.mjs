@@ -21,3 +21,5 @@ console.time('Busca Sequencial')
 console.log('Posição do nome: ' + buscaSequencial(objNomes, obj => obj.first_name === 'DOUGLAS'))
 console.log('Numero de Comparações: ' + cont)
 console.timeEnd('Busca Sequencial')
+
+
