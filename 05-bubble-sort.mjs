@@ -27,9 +27,7 @@ function bubbleSort(vetor){
 
 import {nomes} from './includes/100-mil-nomes.mjs'
 
-console.log('Antes:', nomes)
 console.time('Ordenando Nomes...')
 bubbleSort(nomes)
 console.timeEnd('Ordenando Nomes...')
-console.log('Depois:', nomes)
 console.log({totTrocas,pass,comps})
