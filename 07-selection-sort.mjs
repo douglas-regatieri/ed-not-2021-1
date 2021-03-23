@@ -19,12 +19,15 @@ function selectionSort(vetor){
             if(vetor[j] < vetor[menor]) menor = j
             comps++
         }
+        pass++
         return menor
     }
     for(let i = 0; i <= vetor.length - 2; i++){
         let menor = encontrarMenor(i+1)
-        if(vetor[menor] < vetor[i]) [vetor[menor], vetor[i]] = [vetor[i], vetor[menor]]
-        
+        if(vetor[menor] < vetor[i]){
+             [vetor[menor], vetor[i]] = [vetor[i], vetor[menor]]
+             totTrocas++
+        }
     }
 }
 
